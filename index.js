@@ -20,7 +20,7 @@ function changeImage() {
         currentIndex = 1;
     }
 
-    image__container.style = `transform:translate(-${currentIndex * 101}%)`;
+    image__container.style = `transform:translate(-${currentIndex * 100}%)`;
 
 }
 
