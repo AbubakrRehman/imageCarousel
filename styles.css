@@ -1,11 +1,61 @@
-*{
+* {
     box-sizing: border-box;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 
 }
 
 
-html{
+html {
     font-size: 62.5%;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+
+}
+
+.carousel {
+    border: 2px solid black;
+    width: 500px;
+    height: 530px;
+    overflow: hidden;
+}
+
+.image__container {
+    /* border: 2px solid red; */
+    display: flex;
+    transform: translateX(-101%);
+    transition: tramsform 0.5s ease;
+
+}
+
+
+img {
+    min-width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.buttons__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 5.5px;
+    background-color: rgb(108, 108, 218);
+    color: white;
+    width: 49.5%;
+    border: none;
+}
+
+btn:focus {
+    outline: none;
+}
+
+.btn:hover {
+    cursor: pointer;
 }
