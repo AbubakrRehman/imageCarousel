@@ -28,8 +28,8 @@ body {
 .image__container {
     /* border: 2px solid red; */
     display: flex;
-    transform: translateX(0%);
-    transition: tramsform 0.5s ease;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
 
 }
 
