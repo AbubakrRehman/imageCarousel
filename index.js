@@ -4,10 +4,11 @@ let prev = document.getElementById("prev");
 let next = document.getElementById("next");
 
 let currentIndex = 0;
-setInterval(run, 2000);
+let timer = setInterval(run, 2000);
 
 function run() {
     currentIndex++;
+    console.log("from inside timer function", currentIndex);
     changeImage();
 }
 
@@ -24,12 +25,21 @@ function changeImage() {
 }
 
 prev.addEventListener("click", (e) => {
-    console.log("inside prev eventHandler!!!!!");
-    idx--;
+    currentIndex--;
+    console.log("bcoz of prev", currentIndex);
     changeImage();
+    clearTimer();
 })
 
 next.addEventListener("click", (e) => {
-    idx++;
+    currentIndex++;
+    console.log("bcoz of next", currentIndex);
     changeImage();
+    clearTimer();
 })
+
+
+function clearTimer() {
+    clearInterval(timer);
+    timer = setInterval(run, 2000);
+}
